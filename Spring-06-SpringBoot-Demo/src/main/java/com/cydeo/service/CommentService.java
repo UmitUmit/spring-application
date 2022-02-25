@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 @Lazy
 public class CommentService {
 
+
     private final CommentRepository commentRepository;
     private final CommentNotificationProxy commentNotificationProxy;
 
