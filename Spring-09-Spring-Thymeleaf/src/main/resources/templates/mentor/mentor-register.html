@@ -7,10 +7,13 @@
 
 </head>
 
-<div elign="center"></div>
+<div elign="center">
+
 <body>
 
-<form th:object="${mentor}">
+
+
+<form th:action="@{/mentor/confirm}"  method="post" th:object="${mentor}">
 
     <label>First Name:</label>
     <input type="text" id="FirstName" th:field="*{firstName}"><br>
@@ -44,4 +47,5 @@
 
 
 </body>
+</div>
 </html>
