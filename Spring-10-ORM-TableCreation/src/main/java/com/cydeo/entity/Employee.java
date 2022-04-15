@@ -1,16 +1,15 @@
 package com.cydeo.entity;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@Entity
-@Table(name = "Employee_Table") //users cannot used in here
+@Entity //springboot creates employee table in database for us(automatically)
+//@Table(name = "Employee_Table") //users cannot used in here
 public class Employee {
 
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String name;
