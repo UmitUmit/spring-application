@@ -2,3 +2,6 @@
 
         @OneToOne  // this annotation
         @JoinColumn(name= "ozzy")
+
+        @OneToOne(mappedBy="departments")
+        ////bi-directional relationship, don't won it, but can access it both ways. But mapped by name should match the variable in Department class

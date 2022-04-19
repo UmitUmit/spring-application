@@ -16,7 +16,7 @@ public class Department extends BaseEntity{
     private String department;
     private String division;
 
-    @OneToOne
+    @OneToOne(mappedBy = "department") //bi-directional relationship, don't won it, but can access it both ways. But mapped by name should match the variable in Department class
     private Employee employee;
 
 
