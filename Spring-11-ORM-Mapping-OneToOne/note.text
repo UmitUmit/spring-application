@@ -1,0 +1,1 @@
+    @Enumerated(EnumType.STRING)// if without this annotation, Springboot will generate only 0 and 1
