@@ -1,1 +1,4 @@
     @Enumerated(EnumType.STRING)// if without this annotation, Springboot will generate only 0 and 1
+
+        @OneToOne  // this annotation
+        @JoinColumn(name= "ozzy")

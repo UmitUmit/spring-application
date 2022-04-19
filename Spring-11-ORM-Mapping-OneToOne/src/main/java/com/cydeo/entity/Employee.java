@@ -22,6 +22,10 @@ public class Employee extends BaseEntity{ // when found primary key, error will 
     @Enumerated(EnumType.STRING)// if without this annotation, Springboot will generate only 0 and 1
     private Gender gender;
 
+    @OneToOne
+   // @JoinColumn(name= "ozzy")
+    private Department department;
+
     public Employee(String firstName, String lastName, String email, LocalDate hireDate, int salary, Gender gender) {
         this.firstName = firstName;
         this.lastName = lastName;
