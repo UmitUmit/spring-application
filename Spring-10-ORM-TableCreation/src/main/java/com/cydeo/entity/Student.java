@@ -14,13 +14,13 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "studentFirstName", length = 100)
+    @Column(name = "studentFirstName")
     private String firstName; //first_name
     @Column(name = "studentLastName")
     private String lastName;
     private String email;
 
-    @Transient
+    @Transient //if we don't want to put in database, use this annotation
     private String city;
 
     @Column(columnDefinition = "DATE")
