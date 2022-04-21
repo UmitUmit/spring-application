@@ -23,11 +23,17 @@ public class Merchant {
     private BigDecimal commissionRate;
     private Integer payoutDelayCount;
 
-    @OneToMany(mappedBy = "merchant")
-    private List<Payment> payment;
 
 
+    @OneToMany(mappedBy = "merchant")  //in onetomany relationship,ownership belongs to Many side
+    private List<Payment> paymentList;
 
 
-
+    public Merchant(String name, String code, BigDecimal transactionFee, BigDecimal commissionRate, Integer payoutDelayCount) {
+        this.name = name;
+        this.code = code;
+        this.transactionFee = transactionFee;
+        this.commissionRate = commissionRate;
+        this.payoutDelayCount = payoutDelayCount;
+    }
 }
