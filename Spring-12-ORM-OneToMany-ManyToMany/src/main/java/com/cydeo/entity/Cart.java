@@ -3,8 +3,8 @@ package com.cydeo.entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "carts")
@@ -13,5 +13,15 @@ import javax.persistence.Table;
 public class Cart extends BaseEntity{
 
 
+    private String name;
+    private String code;
+
+
+
+    @ManyToMany
+    @JoinTable(name = "car_item_rel",
+    joinColumns = @JoinColumn(name = "c_id"),
+    inverseJoinColumns = @JoinColumn(name = "i_id")
+    private List<Item> itemList;
 
 }
