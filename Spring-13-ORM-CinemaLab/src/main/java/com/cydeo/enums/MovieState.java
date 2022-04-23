@@ -1,5 +1,5 @@
 package com.cydeo.enums;
 
-public class MovieState {
-
+public enum MovieState {
+    ACTIVE,DRAFT,SUSPENDED;
 }
